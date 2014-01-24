@@ -82,7 +82,7 @@
 
           // Compose events
           var handlePreCompose = function(evt) {
-            var ctx = evt.getContext();
+            var ctx = evt.context;
             var width = draggableElt.offset().left + draggableElt.width() / 2;
             ctx.save();
             ctx.beginPath();
@@ -91,7 +91,7 @@
           };
 
           var handlePostCompose = function(evt) {
-            evt.getContext().restore();
+            evt.context.restore();
           };
 
           // Display swipe or not depends on the number of layers currently on

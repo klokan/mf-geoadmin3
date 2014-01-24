@@ -65,8 +65,8 @@
                 //recognized as mouseEvent on Mac by the google closure.
                 //We have to use the apple key on those devices
                 return scope.options.active &&
-                       (evt.getBrowserEvent().ctrlKey ||
-                       (gaBrowserSniffer.mac && evt.getBrowserEvent().metaKey));
+                       (evt.browserEvent.ctrlKey ||
+                       (gaBrowserSniffer.mac && evt.browserEvent.metaKey));
               },
               style: new ol.style.Style({
                 stroke: new ol.style.Stroke({
